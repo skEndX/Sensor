@@ -3,7 +3,7 @@ len=length(gps(:,1));
 start_point=gps(1,:); % GPS 시작점
 end_point=gps(len,:); % GPS 종료점
 
-figure(1); zlim([0 100]); hold on; grid on; title('201801730 �����');
+figure(1); zlim([0 100]); hold on; grid on; title('201801730 김다희');
 xlabel('latitude'); ylabel('longitude'); zlabel('altitude');
 
 plot3(start_point(1), start_point(2), start_point(3),'o',...
@@ -25,7 +25,7 @@ end
 view(3);
 
 [utmX, utmY, utmzone, utmhemi]=wgs2utm(gps(:,1),gps(:,2),52,'s');
-figure(2); hold on; grid on; title('201801730 �����');
+figure(2); hold on; grid on; title('201801730 김다희');
 img=imread('map.jpg');
 imagesc([min(utmX) max(utmX)],[max(utmY) min(utmY)],img);
 xlabel('x (m)'); ylabel('y (m)'); plot(utmX,utmY,'LineWidth',4);
